@@ -95,8 +95,9 @@ public class RBTree<T extends Comparable<T>> {
                 // Case 1 / 4: Recolour
                 // TODO: Implement this part
             	// ########## YOUR CODE STARTS HERE ##########
-
-
+                x.parent.colour = Colour.BLACK;
+                uncle.colour = Colour.BLACK;
+                x.parent.parent.colour = Colour.RED;
             	// ########## YOUR CODE ENDS HERE ##########
                 // Check if violated further up the tree
                 x = x.parent.parent;
